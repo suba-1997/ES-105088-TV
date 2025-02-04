@@ -12,8 +12,8 @@
             <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
         </TreeViewFieldsSettings>
         <TreeViewEvents TValue="Employee" NodeClicked="nodeClicked"></TreeViewEvents>
-        <SfContextMenu @ref="menu" Target="#treeview" Items="@MenuItems">
-            <ContextMenuEvents ItemSelected="MenuSelect"></ContextMenuEvents>
+        <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
+            <MenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></MenuEvents>
         </SfContextMenu>
     </SfTreeView>
 </div>
@@ -22,9 +22,11 @@
 
     SfTreeView<Employee> tree;
 
-    SfContextMenu menu;
+    SfContextMenu<MenuItem> menu;
 
     string selectedId;
+    public string[] selectedNodes = Array.Empty<string>();
+    public string[] expandedNodes = new string[] { };
     int index;
 
     // Datasource for menu items
@@ -63,13 +65,16 @@
         if ((eventParameters["which"]).ToString() == "3")
         {
             // To get the selected node id upon context menu click
-            this.selectedId = (await args.Node.GetAttribute("data-uid")).ToString();
+            selectedId = args.NodeData.Id;
+            selectedNodes = new string[] { args.NodeData.Id };
         }
     }
 
     // To add a new node
-    void AddNodes()
+    async Task AddNodes()
     {
+        expandedNodes = new string[] { this.selectedId };
+        string NodeId = "tree_" + this.index.ToString();
         List<object> TreeData = new List<object>();
         TreeData.Add(new
         {
@@ -78,8 +83,11 @@
             ParentId = this.selectedId
 
         });
-        this.tree.AddNodes(TreeData, this.selectedId, null, false);
+        await Task.Delay(100);
+        // Edit the added node.
+        await this.tree.BeginEditAsync(NodeId);
         this.index = this.index + 1;
+
     }
 
     // To delete a tree node
@@ -90,13 +98,13 @@
     }
 
     // To edit a tree node
-    async void RenameNodes()
+    async Task RenameNodes()
     {
-        tree.BeginEdit(this.selectedId);
+        await this.tree.BeginEditAsync(this.selectedId);
     }
 
     // Triggers when context menu is selected
-    public void MenuSelect(MenuEventArgs args)
+    public async Task MenuSelect(MenuEventArgs<MenuItem> args)
     {
         string selectedText = args.Item.Text;
         if (selectedText == "Edit")
