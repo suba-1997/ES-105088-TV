@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace SQLTreeView.Shared.Models
+namespace BlazorApp1.Shared.Models
 {
-   
     public class Order
     {
         [Key]
         public int? OrderID { get; set; }
         [Required]
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         [Required]
         public int EmployeeID { get; set; }
 

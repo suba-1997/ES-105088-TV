@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
-using SQLTreeView.Data;
-using SQLTreeView.Shared.DataAccess;
-using SQLTreeView.Shared.Models;
+using BlazorApp1.Data;
+using BlazorApp1.Shared.DataAccess;
+using BlazorApp1.Shared.Models;
+using Microsoft.AspNetCore.Mvc;
+using static BlazorApp1.Client.Pages.Index;
 
-
-namespace WebApplication1.Server.Controllers
+namespace BlazorApp1.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -59,12 +59,12 @@ namespace WebApplication1.Server.Controllers
             return index;
         }
         [HttpPost]
-        public void Post([FromBody]OrganizationDetails employee)
+        public void Post([FromBody] OrganizationDetails employee)
         {
             db.AddEmployee(employee);
         }
         [HttpPut]
-        public object Put([FromBody]OrganizationDetails employee)
+        public object Put([FromBody] OrganizationDetails employee)
         {
             db.UpdateEmployee(employee);
             return employee;

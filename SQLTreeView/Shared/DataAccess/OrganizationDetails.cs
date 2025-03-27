@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SQLTreeView.Data
+namespace BlazorApp1.Data
 {
     public class OrganizationDetails
     {
@@ -18,7 +18,7 @@ namespace SQLTreeView.Data
 
         public bool? IsExpanded { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
     }
 }

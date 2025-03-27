@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SQLTreeView.Shared.Models;
-using SQLTreeView.Data;
-using SQLTreeView.Shared.DataAccess;
-namespace SQLTreeView.Shared.DataAccess
+using BlazorApp1.Shared.Models;
+using BlazorApp1.Data;
+using BlazorApp1.Shared.DataAccess;
+
+namespace BlazorApp1.Shared.DataAccess
 {
     public class OrganizationDataAccessLayer
     {
