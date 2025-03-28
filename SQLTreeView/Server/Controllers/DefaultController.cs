@@ -5,13 +5,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Primitives;
-using BlazorApp1.Data;
-using BlazorApp1.Shared.DataAccess;
-using BlazorApp1.Shared.Models;
+using SQLTreeView.Data;
+using SQLTreeView.Shared.DataAccess;
+using SQLTreeView.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
-using static BlazorApp1.Client.Pages.Index;
+using static SQLTreeView.Client.Pages.Index;
 
-namespace BlazorApp1.Server.Controllers
+namespace SQLTreeView.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

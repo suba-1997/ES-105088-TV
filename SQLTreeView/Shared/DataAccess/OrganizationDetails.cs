@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorApp1.Data
+namespace SQLTreeView.Data
 {
     public class OrganizationDetails
     {

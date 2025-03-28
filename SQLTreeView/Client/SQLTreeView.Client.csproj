@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\BlazorApp1.Shared.csproj" />
+    <ProjectReference Include="..\Shared\SQLTreeView.Shared.csproj" />
   </ItemGroup>
 
 </Project>

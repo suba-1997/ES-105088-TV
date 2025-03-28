@@ -1,7 +1,7 @@
-using BlazorApp1.Shared;
+using SQLTreeView.Shared;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BlazorApp1.Server.Controllers
+namespace SQLTreeView.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,4 +1,4 @@
-namespace BlazorApp1.Shared
+namespace SQLTreeView.Shared
 {
     public class WeatherForecast
     {

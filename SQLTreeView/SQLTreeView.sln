@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Server", "Server\BlazorApp1.Server.csproj", "{08EA8E61-494B-4B0D-986D-2BE56B2CE7C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLTreeView.Server", "Server\SQLTreeView.Server.csproj", "{08EA8E61-494B-4B0D-986D-2BE56B2CE7C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Client", "Client\BlazorApp1.Client.csproj", "{B6C86FFE-BEC0-40F2-8445-E36F7549C807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLTreeView.Client", "Client\SQLTreeView.Client.csproj", "{B6C86FFE-BEC0-40F2-8445-E36F7549C807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Shared", "Shared\BlazorApp1.Shared.csproj", "{55112381-6D34-4945-930C-2109E124DEBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLTreeView.Shared", "Shared\SQLTreeView.Shared.csproj", "{55112381-6D34-4945-930C-2109E124DEBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

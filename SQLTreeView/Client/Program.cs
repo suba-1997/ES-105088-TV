@@ -1,4 +1,4 @@
-using BlazorApp1.Client;
+using SQLTreeView.Client;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;

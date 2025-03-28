@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorApp1.Shared.Models
+namespace SQLTreeView.Shared.Models
 {
     public class Order
     {

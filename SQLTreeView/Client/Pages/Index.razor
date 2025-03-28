@@ -49,8 +49,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var response = await Http.GetStringAsync("api/Default");
-        var employees = JsonConvert.DeserializeObject<List<Employee>>(response);
         // To get the last item index from the db
         var count = await Http.GetFromJsonAsync<int>("api/Default/index");
         this.index = count + 1;
@@ -65,7 +63,7 @@
         if ((eventParameters["which"]).ToString() == "3")
         {
             // To get the selected node id upon context menu click
-           // this.selectedId = (await args.Node.GetAttribute("data-uid")).ToString();
+            this.selectedId = (await args.NodeData.GetAttribute("data-uid")).ToString();
         }
     }
 
